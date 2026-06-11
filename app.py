@@ -51,6 +51,14 @@ def set_custom_css():
 
 set_custom_css()
 
+# Fungsi Zona Waktu WIB
+def get_wib_time():
+    wib = pytz.timezone('Asia/Jakarta')
+    return datetime.now(wib)
+
+def bersihkan_teks_untuk_pdf(teks):
+    return str(teks).encode('latin-1', 'ignore').decode('latin-1')
+
 DB_FILE = 'sekolah_lokal.db'
 DAFTAR_KELAS = [
     "7-A", "7-B", "8-A", "8-B", "9-A", "9-B",
