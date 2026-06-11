@@ -22,29 +22,30 @@ st.set_page_config(
 def set_custom_css():
     st.markdown("""
         <style>
-        /* Sembunyikan menu setting bawaan */
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        
-        /* SEMBUNYIKAN SEMUA ELEMEN DI POJOK KANAN ATAS */
-        [data-testid="stAppDeployButton"] {
+        /* Sembunyikan Header Total */
+        header[data-testid="stHeader"] {
             display: none !important;
         }
+        
+        /* Sembunyikan Main Menu (Ikon 3 Titik/Garis) */
+        #MainMenu, 
+        [data-testid="stAppToolbar"], 
+        [data-testid="stToolbar"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Sembunyikan tombol Deploy dan Status Widget */
+        [data-testid="stAppDeployButton"],
         [data-testid="stStatusWidget"] {
             display: none !important;
-        }
-        header[data-testid="stHeader"] {
-            background-color: transparent !important;
-            height: 0 !important;
+            visibility: hidden !important;
         }
         
-        /* Desain UI Anda tetap dipertahankan */
-        div.stButton > button:first-child {
-            background-color: #D4AF37; color: #0F1115; border-radius: 8px; border: none;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); transition: all 0.3s ease;
-            font-weight: 700; padding: 0.6rem 1.2rem;
+        /* Sembunyikan Footer */
+        footer {
+            display: none !important;
         }
-        [data-testid="stSidebar"] { box-shadow: 4px 0 15px rgba(0,0,0,0.5); border-right: 1px solid #2A2E39; }
         </style>
     """, unsafe_allow_html=True)
 
