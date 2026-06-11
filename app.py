@@ -11,7 +11,13 @@ from docx import Document
 # ==========================================
 # 1. KONFIGURASI UTAMA
 # ==========================================
-st.set_page_config(page_title="SIAKAD SMPN 152", page_icon="🏫", layout="wide")
+
+st.set_page_config(
+    page_title="SIAKAD SMPN 152", 
+    page_icon="🏫", 
+    layout="wide",
+    initial_sidebar_state="expanded"  # Ini kuncinya agar menu selalu muncul
+)
 
 def set_custom_css():
     st.markdown("""
