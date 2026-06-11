@@ -16,6 +16,13 @@ st.set_page_config(page_title="SIAKAD SMPN 152", page_icon="🏫", layout="wide"
 def set_custom_css():
     st.markdown("""
         <style>
+        /* 1. MENGHILANGKAN MENU ATAS & BAWAH BAWAAN STREAMLIT */
+        #MainMenu {visibility: hidden;}
+        header {visibility: hidden;}
+        footer {visibility: hidden;}
+        .stDeployButton {display:none;}
+        
+        /* 2. DESAIN TOMBOL & UI PREMIUM ANDA (TETAP DIPERTAHANKAN) */
         div.stButton > button:first-child {
             background-color: #D4AF37; color: #0F1115; border-radius: 8px; border: none;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); transition: all 0.3s ease;
