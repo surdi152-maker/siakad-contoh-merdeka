@@ -22,16 +22,18 @@ st.set_page_config(
 def set_custom_css():
     st.markdown("""
         <style>
-        /* Sembunyikan menu setting bawaan */
+        /* 1. Sembunyikan elemen bawaan Streamlit yang tidak perlu */
         #MainMenu {visibility: hidden;}
-        
-        /* JANGAN SEMBUNYIKAN HEADER agar tombol menu tetap ada */
-        
-        /* Sembunyikan footer dan tombol deploy saja */
         footer {visibility: hidden;}
         .stDeployButton {display:none;}
         
-        /* Desain tombol dan UI Anda tetap dipertahankan */
+        /* 2. Sembunyikan tombol 'Manage App' / Status Widget (KUNCI UTAMA) */
+        [data-testid="stStatusWidget"] {
+            visibility: hidden !important;
+            display: none !important;
+        }
+        
+        /* 3. Desain tombol UI Anda */
         div.stButton > button:first-child {
             background-color: #D4AF37; color: #0F1115; border-radius: 8px; border: none;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); transition: all 0.3s ease;
