@@ -1,6 +1,7 @@
 streamlit
 pandas
-bcrypt
-fpdf
 openpyxl
 python-docx
+fpdf
+bcrypt
+pytz
