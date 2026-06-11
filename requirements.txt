@@ -1,0 +1,6 @@
+streamlit
+pandas
+bcrypt
+fpdf
+openpyxl
+python-docx
