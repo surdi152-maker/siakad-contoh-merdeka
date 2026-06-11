@@ -22,11 +22,16 @@ st.set_page_config(
 def set_custom_css():
     st.markdown("""
         <style>
+        /* Sembunyikan menu setting bawaan */
         #MainMenu {visibility: hidden;}
-        header {visibility: hidden;}
+        
+        /* JANGAN SEMBUNYIKAN HEADER agar tombol menu tetap ada */
+        
+        /* Sembunyikan footer dan tombol deploy saja */
         footer {visibility: hidden;}
         .stDeployButton {display:none;}
         
+        /* Desain tombol dan UI Anda tetap dipertahankan */
         div.stButton > button:first-child {
             background-color: #D4AF37; color: #0F1115; border-radius: 8px; border: none;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); transition: all 0.3s ease;
@@ -36,12 +41,7 @@ def set_custom_css():
             background-color: #AA841F; color: white;
             box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4); transform: translateY(-2px);
         }
-        div[data-testid="stMetricValue"] { font-size: 2.2rem; color: #D4AF37; font-weight: 800; }
         [data-testid="stSidebar"] { box-shadow: 4px 0 15px rgba(0,0,0,0.5); border-right: 1px solid #2A2E39; }
-        [data-testid="stForm"] {
-            border-radius: 12px; border: 1px solid #2A2E39;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3); padding: 2rem; background-color: #1A1D24;
-        }
         </style>
     """, unsafe_allow_html=True)
 
